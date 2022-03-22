@@ -7,9 +7,19 @@
 
 // Algoritma:
 
-```
-1. Masukan nilai panjang
-2. Masukan nilai lebar
-3. Rumus untuk menghitung L  yaitu L= p * l
-4. Nilai  L (Luas) akan dicetak sebagai output ke perangkat output (keluaran)
-```
+
+// 1. Masukan nilai panjang
+// 2. Masukan nilai lebar
+// 3. Rumus untuk menghitung L  yaitu L= p * l
+// 4. Nilai  L (Luas) akan dicetak sebagai output ke perangkat output (keluaran)
+
+
+const p = prompt('Masukan nilai panjang: ');
+const l = prompt('Masukan nilai panjang: ');
+
+function hitungPersegi(){
+  let Luas = p * l;
+  return 'Luas adalah persegi ' + Luas;
+}
+
+document.write(hitungPersegi());
