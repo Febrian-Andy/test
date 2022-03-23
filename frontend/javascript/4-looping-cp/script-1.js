@@ -12,6 +12,18 @@
 
 
 // Masukan jumlah bilangan yang ingin dicek, iterasi dari angka 1
-const counter = parseInt(prompt("Masukan jumlah bilangan yang ingin dicek: "));
+
 
 // TODO: answer here
+for (var i = 1; i <= 50; i++) {
+  if (i % 3 == 0 && i % 5 === 0){
+    console.log(i + " " +" merupakan bilangan kelipatan 3 dan 5");
+  }
+  else if (i % 3 == 0) {
+    console.log(i + " " + " merupakan bilangan kelipatan 3");
+  }
+  else if (i % 5 == 0) {
+    console.log(i + " " + " merupakan bilangan kelipatan 5");
+  }
+  else console.log(i);
+}
