@@ -8,14 +8,14 @@
 
 function angkaPalindrome(num) {
   // TODO: answer here
-  let leftSide = 1;
-  let rightSide = 2;
+  let x = 1;
+  let y = 2;
 
-  while (leftSide !== rightSide) {
+  while (x !== y) {
     num++;
     let string = num.toString();
-    leftSide = string.slice(0, Math.ceil(string.length / 2));
-    rightSide = string
+    x = string.slice(0, Math.ceil(string.length / 2));
+    y = string
       .slice(Math.floor(string.length / 2), string.length)
       .split("")
       .reverse()
