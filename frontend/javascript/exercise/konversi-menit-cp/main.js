@@ -13,8 +13,16 @@
 
 function konversiMenit(menit) {
   // TODO: answer here
+  var jam = Math.floor(menit / 60);
+  var menit = menit % 60;
+  if (menit < 10) {
+    menit = "0" + menit;
+  }
+  return jam + ":" + menit;
 }
 
+
+console.log(konversiMenit(99));
 console.log(konversiMenit(61));
 console.log(konversiMenit(94));
 console.log(konversiMenit(51));

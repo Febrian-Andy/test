@@ -23,6 +23,21 @@ function ruangCafe(name, age, money) {
   const latte = 300000;
 
   // TODO: answer here
+
+  if(name === ''){
+    return "Anda tidak boleh masuk!"
+  }else if(money <= juice && money <= latte){
+    return "Uang tidak cukup. Anda harus pulang."
+
+  }else if( money >= juice && age < 17  ){
+    let sisaUang = money -= juice
+    return "Anda bisa pesan juice. Sisa uang anda: " + sisaUang
+  }else if(money >= juice && money >= latte && age > 17){
+
+    let sisaUang = money-= latte;
+    return "Anda bisa pesan latte. Sisa uang anda: " + sisaUang;
+  }
+  
 }
 
 console.log(ruangCafe('', 21, 2000000))

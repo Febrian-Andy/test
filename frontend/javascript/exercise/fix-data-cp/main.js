@@ -37,10 +37,58 @@
 
 function fixData(line) {
   // TODO: answer here
+
+  let countVokal = 0;
+  let countKonsonan = 0;
+  let countVirus = 0;
+  let hasil = "";
+
+  for (let i = 0; i < line.length; i++) {
+    if (line[i] === "a" || line[i] === "i" || line[i] === "u" || line[i] === "e" || line[i] === "o"){
+      countVokal++;
+    } else if (line[i] === "#") {
+      countVirus++ 
+    } else {
+      countKonsonan++;
+    }
+  }
+
+  if (countVokal < countKonsonan) {
+    for (let j = 0; j < line.length; j++) {
+      if (line[j] === "#") {
+        hasil += "a";
+        
+      } else {
+        hasil += line[j];
+       
+      }
+    }
+  } else if (countVokal > countKonsonan) {
+  
+    for (let k = 0; k < line.length; k++) {
+      if (line[k] === "#") {
+        hasil += "b";
+      } else {
+        hasil += line[k];
+      }
+    }
+  } else if (countVokal === countKonsonan) {
+    
+    for (let l = 0; l < line.length; l++) {
+      if (line[l] === "#") {
+        hasil += "c";
+      } else {
+        hasil += line[l];
+      }
+    }
+  } else {
+    hasil = line;
+  }
+  return hasil;
 }
 
-console.log(fixData('aoi#fdg#ue'))
-console.log(fixData('eh#xyz#oi#'))
+console.log(fixData('abc#ab#ueo'))
+console.log(fixData('abcabdueobbb'))
 console.log(fixData('#eui#bcl##'))
 
 module.exports = fixData
