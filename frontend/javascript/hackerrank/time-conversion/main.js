@@ -15,7 +15,10 @@
 function timeConversion(s) {
   // Write your code here
   // TODO: answer here
-}
+
+  
+
+} 
 
 function main() {
   //var s = readLine();

@@ -13,7 +13,22 @@
 function miniMaxSum(arr) {
   // Write your code here
   // TODO: answer here
-}
+  const numbers = arr.slice('').sort();
+
+  let min = 0;
+  let max = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    if (i < 4) {
+      min = min + numbers[i];
+    }
+    if (i > 0 && i < 5) {
+      max += numbers[i];
+    }
+  }
+
+  return `${min} ${max}`;
+
+} 
 
 function main() {
   //arr = readLine().split(' ');

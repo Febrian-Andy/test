@@ -14,6 +14,16 @@
 function gradingStudents(grades) {
   // Write your code here
   // TODO: answer here
+  
+  grades.map((grade,i)=>{        
+    if(grade >= 38){                
+       let fg = (grade/5).toString().split('.');
+        if(fg[1]>5){
+            grades[i]=((parseInt(fg[0],10)+1) * 5);
+        };     
+    }
+  });
+  return grades;
 }
 
 function main() {
