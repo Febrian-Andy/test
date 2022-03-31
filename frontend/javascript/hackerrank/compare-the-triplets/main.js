@@ -17,11 +17,12 @@
 function compareTriplets(a, b) {
   // Write your code here
   // TODO: answer here
-  let ascore = 0, bscore = 0;
-    a.forEach((item, i) => {
-        (a[i] > b[i]) && ascore++;
-        (a[i] < b[i]) && bscore++;
-    });
+   
+    let score = [0,0]
+
+    for (let i = 0; i < a.length; i++)
+        a[i] > b[i] ? score[0]++ : a[i] < b[i] ? score[1]++ : ""
+    return score
 }
 function main() {
 
