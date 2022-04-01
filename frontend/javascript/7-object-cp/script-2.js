@@ -8,10 +8,29 @@
 let calculator = {
   // Tulis kode di sini
   // TODO: answer here
+  x : 25,
+  y : 5,
+
+  sum:function(){
+    return this.x += this.y;
+  },
+  substract: function(){
+    return this.x - this.y
+  },
+  multiply:function(){
+    return this.x * this.y
+  },
+  division:function(){
+    return this.x / this.y
+  }
+
 };
   
-calculator.read();
+// calculator.read();
+
 console.log(calculator.sum());
-console.log(calculator.substract());
-console.log(calculator.multiply());
-console.log(calculator.division());
+
+
+// console.log(calculator.substract());
+// console.log(calculator.multiply());
+// console.log(calculator.division());
